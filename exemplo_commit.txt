@@ -1,0 +1,7 @@
+exemplo de como fazer um commit seguro
+
+
+cd 'diretório clonado' 
+
+git add exemplo_commit.txt
+git commit -m 'arquivo criado para aprender a fazer essa caralha'

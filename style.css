@@ -16,6 +16,28 @@ header {
   height: 190px;
   flex-wrap: wrap;
   text-align: center;
+  position: relative; /* Necessário para centralização real */
+}
+
+/* Ajuste da logo */
+header img {
+  max-width: 185px;
+  height: auto;
+  position: relative;
+  z-index: 2;
+}
+
+header h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 1;
+}
+
+header nav {
+  position: relative;
+  z-index: 2;
 }
 
 header nav button {
@@ -237,16 +259,21 @@ form input, form button {
   background: #e63900 !important;
 }
 
-
-/* =========================== */
-/*  RESPONSIVIDADE GERAL       */
-/* =========================== */
+/* ============================= */
+/*   RESPONSIVIDADE GERAL        */
+/* ============================= */
 
 @media (max-width: 900px) {
   header {
     height: auto;
     flex-direction: column;
     gap: 1rem;
+  }
+
+  header h1 {
+    position: static;
+    transform: none;
+    margin-top: 0.5rem;
   }
 
   header nav {
@@ -294,38 +321,5 @@ form input, form button {
 
   .carro-imagem {
     height: 150px;
-  }
-}
-
-
-/* ======================================== */
-/*   CORREÇÃO FINAL: CENTRALIZAÇÃO HEADER   */
-/* ======================================== */
-
-@media (max-width: 700px) {
-  header {
-    height: auto;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 2rem 1rem;
-  }
-
-  header img {
-    max-width: 180px;
-    height: auto;
-  }
-
-  header nav {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 1rem;
-  }
-
-  header nav button {
-    width: 100%;
   }
 }
